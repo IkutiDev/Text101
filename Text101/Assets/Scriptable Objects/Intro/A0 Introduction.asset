@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: A0 Introduction
+  m_EditorClassIdentifier: 
+  storyText: "Welcome to this game,\n\nit's a Choose Your Own Adventure! \n\nAt each
+    stage you'll be asked to push a key to choose an action.\n\nAlso there will be
+    events that change other part of the game and even a combat system similiar to
+    Rock,Papers,Scissors.\n\nPress 1. to start\n"
+  nextStates:
+  - {fileID: 11400000, guid: 03a36a38c419f2546a982bfee9f94a1b, type: 2}
+  stateType: 0

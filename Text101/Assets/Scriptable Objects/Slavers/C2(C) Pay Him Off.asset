@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: C2(C) Pay Him Off
+  m_EditorClassIdentifier: 
+  storyText: "You remember that you have some valuables with you. Maybe paying off
+    the guard would be a smart choice?\n\n1. Pay him off\r\n\r2.I won't share any
+    of my spoils. Time to fight!"
+  nextStates:
+  - {fileID: 11400000, guid: 33ea812ba46163c4398f9185d6a3310a, type: 2}
+  - {fileID: 11400000, guid: c501b8f1ff831284cb722180fadc08f2, type: 2}
+  stateType: 0

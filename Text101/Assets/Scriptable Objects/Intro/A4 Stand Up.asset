@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: A4 Stand Up
+  m_EditorClassIdentifier: 
+  storyText: "You unfasten your seatbelt and see just smoke and fire around you. With
+    great difficulty, you manage to get to the cargo area of your ship where the main
+    doors to get out of are. You don't have much time, so you need to decide what
+    you want to take with you before getting out of here.\n\n1.Take your trusty sidearm,
+    laser pistol, and get out.\r\n2.Take one of med packs to take care of your wounds
+    and get out.\r\n3.Take some of the valuables with you, money before everything
+    else."
+  nextStates:
+  - {fileID: 11400000, guid: 51fc78706a1764f4aa2ac76b59a1bfac, type: 2}
+  - {fileID: 11400000, guid: 2f97c5c0bc3fca74ba4f94d88d449cfc, type: 2}
+  - {fileID: 11400000, guid: b3bddea70c7f3c94e98024107e4f7d92, type: 2}
+  stateType: 0

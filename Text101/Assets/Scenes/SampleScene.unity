@@ -455,6 +455,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1172147726}
+  startingState: {fileID: 11400000, guid: 03a36a38c419f2546a982bfee9f94a1b, type: 2}
+  hasGun: 0
+  hasLoot: 0
+  health: 3
+  enemyHealth: 0
 --- !u!4 &698142415
 Transform:
   m_ObjectHideFlags: 0
@@ -792,8 +797,8 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
+    m_BestFit: 1
+    m_MinSize: 20
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0

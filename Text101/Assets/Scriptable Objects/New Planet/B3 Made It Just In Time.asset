@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: B3 Made It Just In Time
+  m_EditorClassIdentifier: 
+  storyText: "You managed to get out just before the big explosion and your ship turned
+    into big flaming heap of rubbish. But you are alive, so it\u2019s not all bad.
+    Now it\u2019s time to scout out the unknown, beautiful but probably dangerous
+    planet, to see if there is anyone to help or better yet, any spaceships that could
+    help you get out of here.\n\n1.Climb one of the nearby hills to have better view
+    of the area.\r\n2.Scout out nearby grassland for any signs of humans/humanoids."
+  nextStates:
+  - {fileID: 11400000, guid: d3721444ddb2a96458e48a0e57dd32f2, type: 2}
+  - {fileID: 11400000, guid: 660955198ca353a4e82f3865210bc243, type: 2}
+  stateType: 3

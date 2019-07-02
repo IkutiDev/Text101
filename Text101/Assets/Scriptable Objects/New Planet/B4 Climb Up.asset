@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: B4 Climb Up
+  m_EditorClassIdentifier: 
+  storyText: "You climbed up a small hill and with that high point you managed to
+    witness a horrific sight. Slavers preparing new batch of slaves for the work in
+    the mines. You also see unattended spaceship of the slavers. It's time to be either
+    pragmatic or heroic\n\nWhat should I do?\r\n\n1. Sneak to the spaceship and try
+    to steal it.\r\n2. Face off against the Slavers in an attempt to free the slaves."
+  nextStates:
+  - {fileID: 11400000, guid: ac918b178850fc746a180799cd9d7aef, type: 2}
+  - {fileID: 11400000, guid: 0ac2209ac36de7b438c30ac5996e7552, type: 2}
+  stateType: 0

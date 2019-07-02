@@ -10,10 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
-  m_Name: StartingState
+  m_Name: A1 Wake Up
   m_EditorClassIdentifier: 
   storyText: "You wake up to the smell of burning and with a great headache. Your
     name is Roy, you are the pilot and the lone space adventurer, but right now you
     can\r\nfeel that your last voyage didn't end as it should. You don't remember
     what exactly happened, but you can hear disorted voice of your AI assistant warning
-    about heavy hull damage.\r\n\r\nWhat should I do?"
+    about heavy hull damage.\r\n\r\nWhat should I do?\n\n1.Hit random buttons on the
+    main panel in your cockpit\r\n2.Try to focus on what exatcly is your AI Assitant
+    telling you\r\n3.Unfasten your seatbelt and assert situation around you"
+  nextStates:
+  - {fileID: 11400000, guid: 570d9c26f67f26d4e94cbd72ef3514b8, type: 2}
+  - {fileID: 11400000, guid: 8eba1ca054afc304f8162b59a01c3f6a, type: 2}
+  - {fileID: 11400000, guid: 24018c96fd1a6f4448ce1dc3a6fa4e19, type: 2}
+  stateType: 0

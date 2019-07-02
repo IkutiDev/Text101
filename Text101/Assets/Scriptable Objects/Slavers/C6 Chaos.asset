@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
+  m_Name: C6 Chaos
+  m_EditorClassIdentifier: 
+  storyText: 'You won and as the leader of Slavers falls, you can see rage in their
+    eyes. They all aim their guns and spears at you and just as you accept the inevitable,
+    the slaves with their mining equipement decide to join the fight. Chaos ensue.
+
+
+    1. Help out the slaves in the fight.'
+  nextStates:
+  - {fileID: 11400000, guid: 30bdc16fcc9d7bb428b6ed0cc87bf9b8, type: 2}
+  stateType: 0
