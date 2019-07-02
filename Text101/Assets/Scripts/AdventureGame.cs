@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
@@ -15,8 +16,7 @@ public class AdventureGame : MonoBehaviour
     public int enemyHealth;
 
     private State currentState;
-
-    //private readonly string[] daysOfWeek = { "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+    private IEnumerator coroutine;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,17 +36,39 @@ public class AdventureGame : MonoBehaviour
         {
             // Fight System
         }
-        else if (currentState.GetStateType() == StateType.Hit)
+        else if (currentState.GetStateType() == StateType.Branching)
         {
-            
-        }
-        else if (currentState.GetStateType() == StateType.Miss)
-        {
-
+            if (currentState.GetNextStates().Length == 2)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    currentState = hasGun ? nextStates[1] : nextStates[0];
+                }
+            }
+            else if (currentState.GetNextStates().Length == 3)
+            {
+                if (!Input.GetKeyDown(KeyCode.Alpha1)) return;
+                if (hasGun)
+                {
+                    currentState = nextStates[1];
+                }
+                else if (hasLoot)
+                {
+                    currentState = nextStates[2];
+                }
+                else
+                {
+                    currentState = nextStates[0];
+                }
+            }
         }
         else if (currentState.GetStateType()==StateType.TimeLimit)
         {
-            //coroutine and inputs
+            currentState.stateType = StateType.Normal;
+            print("Starting " + Time.time + " seconds");
+            coroutine = WaitAndSelect(10.0f,currentState);
+            StartCoroutine(coroutine);
+            print("Coroutine started");
         }
         else
         {
@@ -89,6 +111,14 @@ public class AdventureGame : MonoBehaviour
                 hasLoot = true;
                 break;
             }
+
+            case StateType.Start:
+            {
+                hasGun = false;
+                hasLoot = false;
+                health = 3;
+                break;
+            }
             case StateType.Normal:
             {
                 break;
@@ -99,5 +129,16 @@ public class AdventureGame : MonoBehaviour
                 break;
             }
         }
+    }
+    private IEnumerator WaitAndSelect(float waitTime, State currState)
+    {
+        yield return new WaitForSeconds(waitTime);
+        if (currentState == currState)
+        {
+            currentState = currentState.GetNextStates()[0];
+        }
+
+        currState.stateType = StateType.TimeLimit;
+        print("Coroutine ended: " + Time.time + " seconds");
     }
 }

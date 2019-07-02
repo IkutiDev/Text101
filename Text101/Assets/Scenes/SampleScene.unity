@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1172147726}
-  startingState: {fileID: 11400000, guid: 03a36a38c419f2546a982bfee9f94a1b, type: 2}
+  startingState: {fileID: 11400000, guid: e3b4997842c68614fa584adad179448c, type: 2}
   hasGun: 0
   hasLoot: 0
   health: 3

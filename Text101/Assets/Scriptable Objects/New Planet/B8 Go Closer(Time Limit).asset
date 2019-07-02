@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
   m_Name: B8 Go Closer(Time Limit)
   m_EditorClassIdentifier: 
-  storyText: "As you go closer you realise that the voices are of the Slavers and
-    their new batch of slaves. You can also see a neaby spaceship that probably belong
-    to the Slavers. Time to think fast.\n\nWhat should I do?\n\n1.Face off against
-    the Slavers in an attempt to free the slaves.\n2. Sneak to the spaceship and try
-    to steal it.\r"
+  storyText: "You only have 15 seconds to decide!\n\nAs you go closer you realise
+    that the voices are of the Slavers and their new batch of slaves. You can also
+    see a neaby spaceship that probably belong to the Slavers. Time to think fast.\n\nWhat
+    should I do?\n\n1.Face off against the Slavers in an attempt to free the slaves.\n2.
+    Sneak to the spaceship and try to steal it.\r"
   nextStates:
   - {fileID: 11400000, guid: 0ac2209ac36de7b438c30ac5996e7552, type: 2}
   - {fileID: 11400000, guid: ac918b178850fc746a180799cd9d7aef, type: 2}

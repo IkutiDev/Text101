@@ -13,5 +13,6 @@ public enum StateType
     Hit,
     Miss,
     Branching,
-    TimeLimit
+    TimeLimit,
+    Start
 }

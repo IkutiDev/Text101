@@ -5,7 +5,7 @@ public class State : ScriptableObject
 {
     [TextArea(10,14)] [SerializeField] private string storyText;
     [SerializeField] private State[] nextStates;
-    [SerializeField] private StateType stateType;
+    [SerializeField] public StateType stateType;
     public string GetStateStory()
     {
         return storyText;
