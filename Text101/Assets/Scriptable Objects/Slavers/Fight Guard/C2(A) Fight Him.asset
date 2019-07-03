@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: C2(A) Fight Him
   m_EditorClassIdentifier: 
   storyText: "You decide to fight of the guard with your trusty machete that is always
-    with you. Choose your action.\n\n1.Quick slice\r\n\r2.Heavy slash\r\n3.Block"
-  nextStates: []
+    with you. Choose your action.\n\n1.Heavy slash\n\r2.Quick slice\n3.Block"
+  nextStates:
+  - {fileID: 11400000, guid: e2221f60cd909724d913d0f2d67de065, type: 2}
+  - {fileID: 11400000, guid: b32318dea64541d42ac290d73e36fdb2, type: 2}
+  - {fileID: 11400000, guid: 0f1fdf277de44eb47a0a86d3ae612887, type: 2}
+  - {fileID: 11400000, guid: 0d74cb18bd179cb4fa8b6c00575ee853, type: 2}
   stateType: 4

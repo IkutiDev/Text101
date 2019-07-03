@@ -6,14 +6,20 @@ public class AdventureGame : MonoBehaviour
 {
     [SerializeField] private Text textComponent;
 
+    [SerializeField] private Text healthTextComponent;
+
     [SerializeField] private State startingState;
+
+    [SerializeField] private State gameOverState;
 
     [SerializeField] private bool hasGun;
 
     [SerializeField] private bool hasLoot;
 
     [SerializeField] private int health=3;
-    public int enemyHealth;
+    private int guardHealth=2;
+    private int leaderHealth = 5;
+    private int leaderCounter = 1;
 
     private State currentState;
     private IEnumerator coroutine;
@@ -22,6 +28,7 @@ public class AdventureGame : MonoBehaviour
     {
         currentState = startingState;
         textComponent.text = currentState.GetStateStory();
+        healthTextComponent.text = health.ToString();
     }
     // Update is called once per frame
     void Update()
@@ -32,9 +39,41 @@ public class AdventureGame : MonoBehaviour
     private void ManageState()
     {
         var nextStates = currentState.GetNextStates();
-        if (currentState.GetStateType()==StateType.FightGuard || currentState.GetStateType() ==StateType.FightLeader)
+        if (health==0)
         {
-            // Fight System
+            currentState = gameOverState;
+            textComponent.text = currentState.GetStateStory();
+            health = -1;
+        }
+        else if (currentState.GetStateType()==StateType.FightGuard || currentState.GetStateType() ==StateType.FightLeader)
+        {
+            textComponent.text = currentState.GetStateStory();
+            if (currentState.GetStateType() == StateType.FightGuard)
+            {
+                if (guardHealth <= 0)
+                {
+                    currentState = nextStates[3];
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    currentState = nextStates[0];
+                    guardHealth--;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    currentState = nextStates[1];
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    currentState = nextStates[2];
+                    health--;
+                    healthTextComponent.text = health.ToString();
+                }
+            }
+            else if(currentState.GetStateType() == StateType.FightLeader)
+            {
+                BossFight();
+            }
         }
         else if (currentState.GetStateType() == StateType.Branching)
         {
@@ -90,6 +129,83 @@ public class AdventureGame : MonoBehaviour
         }
     }
 
+    private void BossFight()
+    {
+        var nextStates = currentState.GetNextStates();
+        if (leaderHealth <= 0)
+        {
+            currentState = nextStates[9];
+        }
+        else if (leaderCounter==1 || leaderCounter == 3)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentState = nextStates[0];
+                leaderCounter++;
+
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentState = nextStates[5];
+                health--;
+                healthTextComponent.text = health.ToString();
+                leaderCounter++;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                currentState = nextStates[7];
+                leaderHealth--;
+                leaderCounter++;
+            }
+
+            
+        }
+        else if (leaderCounter == 2 || leaderCounter == 4)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentState = nextStates[2];
+                leaderHealth--;
+                leaderCounter++;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentState = nextStates[4];
+                leaderCounter++;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                currentState = nextStates[6];
+                health--;
+                healthTextComponent.text = health.ToString();
+                leaderCounter++;
+            }
+        }
+        else if (leaderCounter == 5)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentState = nextStates[1];
+                health--;
+                healthTextComponent.text = health.ToString();
+                leaderCounter = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentState = nextStates[3];
+                leaderHealth--;
+                leaderCounter = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                currentState = nextStates[8];
+                leaderCounter = 1;
+            }
+
+            
+        }
+    }
+
     private void ManageStateType()
     {
         switch (currentState.GetStateType())
@@ -103,6 +219,7 @@ public class AdventureGame : MonoBehaviour
             case StateType.GainHealth:
             {
                 health = 5;
+                healthTextComponent.text = health.ToString();
                 break;
             }
 
@@ -117,6 +234,10 @@ public class AdventureGame : MonoBehaviour
                 hasGun = false;
                 hasLoot = false;
                 health = 3;
+                healthTextComponent.text = health.ToString();
+                guardHealth = 2;
+                leaderHealth = 5;
+                leaderCounter = 1;
                 break;
             }
             case StateType.Normal:

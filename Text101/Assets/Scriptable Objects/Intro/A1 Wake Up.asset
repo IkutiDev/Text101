@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 570d9c26f67f26d4e94cbd72ef3514b8, type: 2}
   - {fileID: 11400000, guid: 8eba1ca054afc304f8162b59a01c3f6a, type: 2}
   - {fileID: 11400000, guid: 24018c96fd1a6f4448ce1dc3a6fa4e19, type: 2}
-  stateType: 0
+  stateType: 10

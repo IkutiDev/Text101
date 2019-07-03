@@ -17,5 +17,8 @@ MonoBehaviour:
 
 
     1. Continue...'
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: c501b8f1ff831284cb722180fadc08f2, type: 2}
+  - {fileID: 11400000, guid: 91116ac3d6e2c4643a025100ff80444e, type: 2}
+  - {fileID: 11400000, guid: 1563edec44efa2241b6eacc31af3a5b2, type: 2}
   stateType: 8

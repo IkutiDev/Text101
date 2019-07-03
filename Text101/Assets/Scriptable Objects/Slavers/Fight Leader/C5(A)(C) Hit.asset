@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
-  m_Name: C2(A)(B) Miss
+  m_Name: C5(A)(C) Hit
   m_EditorClassIdentifier: 
-  storyText: 'Your attack flunked, to the both suprise of the gaurd and yours. With
-    that, guard managed to take a quick slice on you.
+  storyText: 'As the big leader of the Slavers forces all his weight against you,
+    you manage to block his attack and quickly counter attack. A true show of a pure
+    skill. The leader still stands but you can see rage in his eyes.
 
 
     1.Continue...'
   nextStates:
-  - {fileID: 11400000, guid: c501b8f1ff831284cb722180fadc08f2, type: 2}
-  stateType: 7
+  - {fileID: 11400000, guid: fc0ae362c1aa10043b241f6d3912dde5, type: 2}
+  stateType: 0

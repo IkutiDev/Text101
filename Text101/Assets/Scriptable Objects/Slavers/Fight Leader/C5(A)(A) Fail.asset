@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22b480d62d029e84bb517bf606da623c, type: 3}
-  m_Name: C2(A)(A) Hit
+  m_Name: C5(A)(A) Fail
   m_EditorClassIdentifier: 
-  storyText: 'You take a heavy swing with the machete and you manage to hit the guard.
-    That''s gonna leave a scar. You can see that he is barely standing his ground.
+  storyText: 'As you try to take a heavy swing with your machete, the leader of the
+    Slavers manages to block it without breaking a sweat and quickly he stabs you
+    with his spear. Not good. Might be time to change up your tactic.
 
 
     1.Continue...'
   nextStates:
-  - {fileID: 11400000, guid: c501b8f1ff831284cb722180fadc08f2, type: 2}
+  - {fileID: 11400000, guid: fc0ae362c1aa10043b241f6d3912dde5, type: 2}
   stateType: 0

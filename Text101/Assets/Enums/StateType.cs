@@ -11,7 +11,7 @@ public enum StateType
     FightGuard,
     FightLeader,
     Hit,
-    Miss,
+    Fail,
     Branching,
     TimeLimit,
     Start

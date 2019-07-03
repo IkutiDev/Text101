@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: C5(A) Fight
   m_EditorClassIdentifier: 
   storyText: "The duel beigns, you with your trusty machete versus the leader of Slavers
-    and his big spear.\n\nChose your action:\n\n1. Quick slice\r\n\r2.Heavy slash\r\n3.Block"
-  nextStates: []
+    and his big spear.\n\nChose your action:\n\n1. Heavy slash\r\n\r2. Quick slice\r\n3.
+    Block"
+  nextStates:
+  - {fileID: 11400000, guid: 2de00f3c9df81344aac3f6da1bfee607, type: 2}
+  - {fileID: 11400000, guid: 6af0fb7b4317d9d4bbeefebbe6e8b51e, type: 2}
+  - {fileID: 11400000, guid: eb7575bad4948fe408402955059b0a0d, type: 2}
+  - {fileID: 11400000, guid: 31b7a1abd72a66141a92bec978af44df, type: 2}
+  - {fileID: 11400000, guid: 36ae3e5a52b463c4982357c0abb1fecf, type: 2}
+  - {fileID: 11400000, guid: 9984e64b16dcb4043b859492f23814ea, type: 2}
+  - {fileID: 11400000, guid: 37ac8563196637d40ac00481f2931b45, type: 2}
+  - {fileID: 11400000, guid: b88bd5639da1cf94685afde11b5a5a7d, type: 2}
+  - {fileID: 11400000, guid: c65720eb98a879e49946a9d523b1179a, type: 2}
+  - {fileID: 11400000, guid: 50b9e62f4d51c6d4cafc6c99bfc09e94, type: 2}
   stateType: 5
